@@ -16,17 +16,12 @@ export async function GET({ url }) {
   let orderBy = (url.searchParams.get('orderBy') ?? 'publishedAt') + '_' + direction
 
   const query = gql`
-    query getNotities($first: Int, $skip: Int, $orderBy: NotitieOrderByInput) {
-      notities(first: $first, skip: $skip, orderBy: $orderBy) {
+    query getProducten($first: Int, $skip: Int, $orderBy: ProductOrderByInput) {
+      producten(first: $first, skip: $skip, orderBy: $orderBy) {
         titel
-        beschrijving {
-          html
-        }
-        datum
-        herinnering
-        afgerond
+        
       }
-      notitiesConnection {
+      productenConnection {
         pageInfo {
           hasNextPage
           hasPreviousPage
