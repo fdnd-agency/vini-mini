@@ -8,8 +8,10 @@ Vini Mini heeft als missie om voedselallergie te voorkomen bij baby’s. Hiervoo
 
 [Project board](https://github.com/orgs/fdnd-agency/projects/6) 
 
-[Ontwerp / content](https://github.com/fdnd-agency/vini-mini/blob/main/Online-Dagboek-UVA-Eindproduct.pdf)
+[REST API Vini mini](api.vinimini.fdnd.nl)
+
+[Living Styleguide](url)
 
 [Brandbook](https://github.com/fdnd-agency/vini-mini/blob/main/Vini%20Mini%20Brandbook%20V.pdf)
 
-[Living Styleguide](url)
+[Ontwerp / content](https://github.com/fdnd-agency/vini-mini/blob/main/Online-Dagboek-UVA-Eindproduct.pdf)
