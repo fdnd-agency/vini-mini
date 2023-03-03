@@ -19,7 +19,34 @@ export async function GET({ url }) {
     query getProducten($first: Int, $skip: Int, $orderBy: ProductOrderByInput) {
       producten(first: $first, skip: $skip, orderBy: $orderBy) {
         titel
-        
+        slug
+        tagline
+        prijs
+        beschrijving {
+          html
+        }
+        plaatjes {
+          url
+        }
+        schema {
+          titel
+          beschrijving {
+            html
+          }
+          stappen {
+            titel
+            beschrijving {
+              html
+            }
+            gap
+          }
+          plaatjes {
+            url
+          }
+        }
+        tips {
+          tekst
+        }
       }
       productenConnection {
         pageInfo {
