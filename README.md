@@ -8,6 +8,8 @@ Vini Mini heeft als missie om voedselallergie te voorkomen bij baby’s. Hiervoo
 
 [Project board](https://github.com/orgs/fdnd-agency/projects/6) 
 
+[Sprintplanning Miro Board](https://miro.com/app/board/uXjVPiPejQ8=/)
+
 [REST API Ouderplatform Vini mini](https://api.vinimini.fdnd.nl)
 
 [Living Styleguide]
