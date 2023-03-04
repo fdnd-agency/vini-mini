@@ -22,6 +22,15 @@ export async function GET({ url }) {
         slug
         tagline
         prijs
+        categorie {
+          titel
+          beschrijving {
+            html
+          }
+          plaatjes {
+            url
+          }
+        }
         beschrijving {
           html
         }
