@@ -3,10 +3,12 @@
 
 	const data = {
 		Categorie: {
-			GET: '/docs/categorie#get',
+			//GET: '/docs/categorie#get',
+			GET: '/docs/categorie'
 		},
 		Producten: {
-			GET: '/docs/producten#get'
+			//GET: '/docs/producten#get'
+			GET: '/docs/producten'
 		},
 		Product: {
 			// GET: '/docs/products#get',
