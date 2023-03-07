@@ -5,45 +5,23 @@ export async function GET({ url }) {
   let orderBy = (url.searchParams.get('orderBy') ?? 'publishedAt') + '_' + direction
 
   const query = gql`
-    query getProducten($first: Int, $skip: Int, $orderBy: ProductOrderByInput) {
-      producten(first: $first, skip: $skip, orderBy: $orderBy) {
+    query getCategorie($first: Int, $skip: Int, $orderBy: ProductOrderByInput) {
+      caegorieen(first: $first, skip: $skip, orderBy: $orderBy) {
         titel
-        slug
-        tagline
-        prijs
-        categorie {
-          titel
-          beschrijving {
-            html
-          }
-          plaatjes {
-            url
-          }
-        }
         beschrijving {
           html
         }
         plaatjes {
           url
         }
-        schema {
+        producten {
           titel
-          beschrijving {
-            html
-          }
-          stappen {
-            titel
-            beschrijving {
-              html
-            }
-            gap
-          }
+          slug
+          tagline
+          prijs
           plaatjes {
             url
           }
-        }
-        tips {
-          tekst
         }
       }
       productenConnection {
