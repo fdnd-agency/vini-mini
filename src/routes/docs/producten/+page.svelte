@@ -1,4 +1,4 @@
-<h2>Primcipes</h2>
+<h2>Get Producten</h2>
 
 <h3>Voorbeeld requests:</h3>
 
