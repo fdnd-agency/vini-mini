@@ -20,15 +20,10 @@ export async function GET({ url }) {
   const query = gql`
     query getCategorie($first: Int, $skip: Int, $orderBy: ProductOrderByInput) {
       categorie(first: $first, skip: $skip, orderBy: $orderBy) {
-//        id
         titel
         beschrijving {
           html
         }
-//        producten {
-//          titel
-//          slug
-//        }
       }
       productenConnection {
         pageInfo {
