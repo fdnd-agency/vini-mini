@@ -12,7 +12,7 @@ const hygraph = new GraphQLClient(HYGRAPH_URL_HIGH_PERFORMANCE, {
 })
 
 export async function GET({ url }) {
-  let first = Number(url.searchParams.get('first') ?? 5)
+  let first = Number(url.searchParams.get('first') ?? 10)
   let skip = Number(url.searchParams.get('skip') ?? 0)
   let direction = url.searchParams.get('direction') === 'ASC' ? 'ASC' : 'DESC'
   let orderBy = (url.searchParams.get('orderBy') ?? 'publishedAt') + '_' + direction
