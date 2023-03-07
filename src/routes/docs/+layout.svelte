@@ -2,9 +2,9 @@
 	import { Documentation, Nav } from '@fdnd/components';
 
 	const data = {
-		Categorie: {
+		Categories: {
 			//GET: '/docs/categorie#get',
-			GET: '/docs/categorie'
+			GET: '/docs/categories'
 		},
 		Producten: {
 			//GET: '/docs/producten#get'

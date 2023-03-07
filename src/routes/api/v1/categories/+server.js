@@ -1,3 +1,14 @@
+import { GraphQLClient, gql } from 'graphql-request'
+import { HYGRAPH_KEY, HYGRAPH_URL_HIGH_PERFORMANCE } from '$env/static/private'
+
+import { responseInit } from '$lib/server/responseInit'
+
+const hygraph = new GraphQLClient(HYGRAPH_URL_HIGH_PERFORMANCE, {
+  headers: {
+    Authorization: `Bearer ${HYGRAPH_KEY}`,
+  },
+})
+
 export async function GET({ url }) {
   let first = Number(url.searchParams.get('first') ?? 10)
   let skip = Number(url.searchParams.get('skip') ?? 0)
@@ -5,8 +16,8 @@ export async function GET({ url }) {
   let orderBy = (url.searchParams.get('orderBy') ?? 'publishedAt') + '_' + direction
 
   const query = gql`
-    query getCategorie($first: Int, $skip: Int, $orderBy: ProductOrderByInput) {
-      caegorieen(first: $first, skip: $skip, orderBy: $orderBy) {
+    query getCategorie($first: Int, $skip: Int, $orderBy: CategorieOrderByInput) {
+      categories(first: $first, skip: $skip, orderBy: $orderBy) {
         titel
         beschrijving {
           html
@@ -24,7 +35,7 @@ export async function GET({ url }) {
           }
         }
       }
-      productenConnection {
+      categoriesConnection {
         pageInfo {
           hasNextPage
           hasPreviousPage
