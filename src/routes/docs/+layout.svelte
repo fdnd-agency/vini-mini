@@ -11,7 +11,7 @@
 			GET: '/docs/producten'
 		},
 		Product: {
-			// GET: '/docs/products#get',
+			GET: '/docs/product#get',
 			// '[slug]': '/docs/method#slug'
 			// POST: '/docs/method#post',
 			// PUT: '/docs/method#put',

@@ -18,6 +18,7 @@ export async function GET({ url }) {
   const query = gql`
     query getProducten($first: Int, $skip: Int, $orderBy: ProductOrderByInput) {
       producten(first: $first, skip: $skip, orderBy: $orderBy) {
+        id
         titel
         slug
         tagline
