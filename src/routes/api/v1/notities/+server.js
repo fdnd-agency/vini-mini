@@ -28,15 +28,32 @@ export async function POST({ request }) {
   let errors = []
 
   // Controleer de request data op juistheid
-  // if (!requestData.author || typeof requestData.author !== 'string') {
-  //   errors.push({ field: 'author', message: 'author should exist and have a string value' })
-  // }
-  // if (!requestData.text || typeof requestData.text !== 'string') {
-  //   errors.push({ field: 'text', message: 'text should exist and have a string value' })
-  // }
-  // if (!requestData.methodId) {
-  //   errors.push({ field: 'methodId', message: 'methodId should exist' })
-  // }
+  if (!requestData.titel || typeof requestData.titel !== 'string') {
+    errors.push({ field: 'titel', message: 'titel should exist and have a string value' })
+  }
+  if (!requestData.beschrijving || typeof requestData.beschrijving !== 'string') {
+    errors.push({ field: 'beschrijving', message: 'beschrijving should exist and have a string value' })
+  }
+  if (!requestData.datum || typeof requestData.datum !== 'string') {
+    errors.push({
+      field: 'datum',
+      message:
+        'datum should exist and have a RFC 3339 value (1978-11-20T09:00:00Z). See: https://ijmacd.github.io/rfc3339-iso8601/',
+    })
+  }
+  if (!requestData.herinnering) {
+    errors.push({
+      field: 'herinnering',
+      message:
+        'herinnering should exist and have a RFC 3339 array value (["1978-11-20T09:00:00Z", "1978-11-21T09:00:00Z", ...]). See https://ijmacd.github.io/rfc3339-iso8601/',
+    })
+  }
+  if (typeof requestData.afgerond !== 'boolean') {
+    errors.push({ field: 'afgerond', message: 'afgerond should exist and have a boolean (true/false) value' })
+  }
+  if (!requestData.persoonId) {
+    errors.push({ field: 'persoonId', message: 'persoonId should exist' })
+  }
 
   // Als we hier al errors hebben in de form data sturen we die terug
   if (errors.length > 0) {
@@ -45,6 +62,7 @@ export async function POST({ request }) {
         method: 'POST',
         working: 'yes',
         succes: false,
+        status: 400,
         errors: errors,
       })
     )
