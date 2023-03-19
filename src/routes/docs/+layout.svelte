@@ -18,7 +18,14 @@
 			// PATCH: '/docs/method#patch',
 			// DELETE: '/docs/method#delete',
 		},
-		
+		Notities: {
+			GET: '/docs/notities#get',
+			// '[slug]': '/docs/method#slug'
+			POST: '/docs/notities#post',
+			// PUT: '/docs/method#put',
+			// PATCH: '/docs/method#patch',
+			// DELETE: '/docs/method#delete',
+		},
 	};
 </script>
 
