@@ -6,6 +6,9 @@
 			//GET: '/docs/categorie#get',
 			GET: '/docs/categories'
 		},
+		Personen: {
+			GET: '/docs/personen'
+		},
 		Producten: {
 			//GET: '/docs/producten#get'
 			GET: '/docs/producten'
