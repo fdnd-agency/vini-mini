@@ -74,8 +74,8 @@ export async function POST({ request }) {
       mutation createNotitie(
         $titel: String!
         $beschrijving: String!
-        $datum: Date!
-        $herinnering: [Date!]
+        $datum: DateTime!
+        $herinnering: [DateTime!]
         $afgerond: Boolean!
         $persoonId: ID!
       ) {
