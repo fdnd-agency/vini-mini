@@ -8,6 +8,7 @@ export async function GET({ url }) {
   const query = gql`
     query getNotities($id: ID) {
       notities(where: { persoon: { id: $id } }) {
+        id
         titel
         beschrijving
         datum
