@@ -7,7 +7,7 @@ export async function GET({ url }) {
 
   const query = gql`
     query getNotities($id: ID) {
-      notities(where: { persoon: { id: $id } }) {
+      notities(where: { persoon: { id: $id } } first:100) {
         id
         titel
         beschrijving
