@@ -18,6 +18,12 @@ export async function GET({ url }) {
         }
         plaatjes {
           url
+          height
+          width
+          original: url
+          small: url(transformation: { image: { resize: { width: 500, fit: clip } } })
+          originalAsWebP: url(transformation: { document: { output: { format: webp } } })
+          smallAsWebP: url(transformation: { image: { resize: { width: 500, fit: clip } } document: { output: { format: webp } } })
         }
         producten {
           id
@@ -27,6 +33,12 @@ export async function GET({ url }) {
           prijs
           plaatjes {
             url
+            height
+            width
+            original: url
+            small: url(transformation: { image: { resize: { width: 500, fit: clip } } })
+            originalAsWebP: url(transformation: { document: { output: { format: webp } } })
+            smallAsWebP: url(transformation: { image: { resize: { width: 500, fit: clip } } document: { output: { format: webp } } })
           }
         }
       }

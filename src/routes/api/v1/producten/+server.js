@@ -25,6 +25,12 @@ export async function GET({ url }) {
             }
             plaatjes {
               url
+              height
+              width
+              original: url
+              small: url(transformation: { image: { resize: { width: 500, fit: clip } } })
+              originalAsWebP: url(transformation: { document: { output: { format: webp } } })
+              smallAsWebP: url(transformation: { image: { resize: { width: 500, fit: clip } } document: { output: { format: webp } } })
             }
           }
           beschrijving {
@@ -32,6 +38,12 @@ export async function GET({ url }) {
           }
           plaatjes {
             url
+            height
+            width
+            original: url
+            small: url(transformation: { image: { resize: { width: 500, fit: clip } } })
+            originalAsWebP: url(transformation: { document: { output: { format: webp } } })
+            smallAsWebP: url(transformation: { image: { resize: { width: 500, fit: clip } } document: { output: { format: webp } } })
           }
           schema {
             titel
@@ -47,6 +59,12 @@ export async function GET({ url }) {
             }
             plaatjes {
               url
+              height
+              width
+              original: url
+              small: url(transformation: { image: { resize: { width: 500, fit: clip } } })
+              originalAsWebP: url(transformation: { document: { output: { format: webp } } })
+              smallAsWebP: url(transformation: { image: { resize: { width: 500, fit: clip } } document: { output: { format: webp } } })
             }
           }
           tips {
@@ -79,6 +97,12 @@ export async function GET({ url }) {
             }
             plaatjes {
               url
+              height
+              width
+              original: url
+              small: url(transformation: { image: { resize: { width: 500, fit: clip } } })
+              originalAsWebP: url(transformation: { document: { output: { format: webp } } })
+              smallAsWebP: url(transformation: { image: { resize: { width: 500, fit: clip } } document: { output: { format: webp } } })
             }
           }
           beschrijving {
@@ -86,6 +110,12 @@ export async function GET({ url }) {
           }
           plaatjes {
             url
+            height
+            width
+            original: url
+            small: url(transformation: { image: { resize: { width: 500, fit: clip } } })
+            originalAsWebP: url(transformation: { document: { output: { format: webp } } })
+            smallAsWebP: url(transformation: { image: { resize: { width: 500, fit: clip } } document: { output: { format: webp } } })
           }
           schema {
             titel
@@ -101,6 +131,12 @@ export async function GET({ url }) {
             }
             plaatjes {
               url
+              height
+              width
+              original: url
+              small: url(transformation: { image: { resize: { width: 500, fit: clip } } })
+              originalAsWebP: url(transformation: { document: { output: { format: webp } } })
+              smallAsWebP: url(transformation: { image: { resize: { width: 500, fit: clip } } document: { output: { format: webp } } })
             }
           }
           tips {
